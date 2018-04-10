@@ -1,0 +1,28 @@
+# Audio files to be listed as buttons
+# Syntax:
+# [Button text]:[file path]
+
+# Music
+Welcome to the Jungle:music/jungle.wav
+Take On Me:music/aha.wav
+Tetris Theme:music/tetris.wav
+Crazy Train:music/crazy.wav
+99 Luftballons:music/luft.wav
+Venus:music/venus.wav
+It's Still Rock and Roll to Me:music/rnr.wav
+Sweet Dreams:music/dreams.wav
+Xevious Theme:music/xevious.wav
+Never Gonna Give You Up:music/rick.wav
+
+# Sound Effects
+DK Up Noise:sfx/dk1.wav
+Galaga Spider:sfx/galaga1.wav
+Galaga Celebrate:sfx/galaga2.wav
+Mario Jingle:sfx/mario1.wav
+Xevious Bomb:sfx/xev1.wav
+
+# Meme sounds
+LEEROY JENKINS!:memes/leeroy.wav
+Startup:memes/start.wav
+I'm a computer:memes/comp.wav
+REEE:memes/ree.wav

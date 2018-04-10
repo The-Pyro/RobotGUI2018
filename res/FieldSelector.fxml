@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id='rootNode' xmlns:fx='http://javafx.com/fxml'
+	fx:controller='robogui.gui.FieldSelector'>
+	<ImageView>
+		<image>
+			<Image url='@/res/halfField.png' />
+		</image>
+	</ImageView>
+
+	<ToggleButton fx:id='lScaleButton' prefHeight='39' prefWidth='29'
+		layoutX='76' layoutY='11' style='-fx-base: #00ff00;'
+		onAction='#lScaleHandle' />
+	<ToggleButton fx:id='rScaleButton' prefHeight='39' prefWidth='29'
+		layoutX='196' layoutY='11' style='-fx-base: #00ff00;'
+		onAction='#rScaleHandle' />
+	<ToggleButton fx:id='lSwitchButton' prefHeight='39' prefWidth='29'
+		layoutX='91' layoutY='140' style='-fx-base: #00ff00;'
+		onAction='#lSwitchHandle' />
+	<ToggleButton fx:id='rSwitchButton' prefHeight='39' prefWidth='29'
+		layoutX='181' layoutY='140' style='-fx-base: #00ff00;'
+		onAction='#rSwitchHandle' />
+
+	<fx:define>
+		<ToggleGroup fx:id='rInboardGroup' />
+		<ToggleGroup fx:id='lInboardGroup' />
+		<ToggleGroup fx:id='startPosGroup' />
+	</fx:define>
+
+	<RadioButton toggleGroup='$lInboardGroup' userData='false'
+		onAction='#lInboardHandle' layoutX='71' layoutY='155' />
+	<RadioButton toggleGroup='$lInboardGroup' userData='true'
+		onAction='#lInboardHandle' layoutX='97' layoutY='180' />
+	<RadioButton toggleGroup='$rInboardGroup' userData='false'
+		onAction='#rInboardHandle' layoutX='211' layoutY='155' />
+	<RadioButton toggleGroup='$rInboardGroup' userData='true'
+		onAction='#rInboardHandle' layoutX='187' layoutY='180' />
+
+	<RadioButton toggleGroup='$startPosGroup' userData='-1'
+		layoutX='64' layoutY='280' onAction='#startPosHandle' />
+	<RadioButton toggleGroup='$startPosGroup' userData='0'
+		layoutX='139' layoutY='280' onAction='#startPosHandle' />
+	<RadioButton toggleGroup='$startPosGroup' userData='1'
+		layoutX='216' layoutY='280' onAction='#startPosHandle' />
+</Pane>

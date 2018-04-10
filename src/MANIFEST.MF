@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.9
+Created-By: 1.8.0_131-b11 (Oracle Corporation)
+Main-Class: robogui.main.Main
+Class-Path: lib/api-1.2.1.jar lib/app-1.2.1.jar lib/cameraserver-1.2.1
+ .jar lib/ntcore-java-4.0.0.jar lib/ntcore-jni-4.0.0-all.jar lib/wpiut
+ il-java-3.0.0.jar
+

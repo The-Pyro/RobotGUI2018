@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<?import robogui.gui.CameraController?>
+<?import robogui.gui.LEDController?>
+
+<BorderPane fx:id='rootNode' fx:controller='robogui.gui.GUI'
+	style='-fx-font-family: "Comic Sans MS"; -fx-font-size: 18;'
+	xmlns:fx='http://javafx.com/fxml'>
+	<top>
+		<VBox spacing='5'>
+			<LEDController fx:id='leds' />
+
+			<Separator prefHeight='20' />
+		</VBox>
+	</top>
+
+	<center>
+	</center>
+
+	<right>
+		<HBox spacing='15' alignment='CENTER'>
+			<VBox alignment='CENTER_LEFT'>
+				<Label text='Cube Status:' />
+				<StackPane>
+					<Rectangle fx:id='cubeStatus' fill='RED' stroke='GREY'
+						height='80' width='160' />
+					<Label text='Not Available in Your Region' />
+				</StackPane>
+
+				<Separator prefHeight='20' />
+
+				<Label fx:id='uLiftHeight' text='Upper Lifter is at %f inches (%d ticks)' />
+				<Label fx:id='lLiftHeight' text='Lower Lifter is at %f inches (%d ticks)' />
+				<Label fx:id='cubeHeight' text='Total cube height:  %f inches'/>
+
+				<Separator prefHeight='20' />
+
+				<Label fx:id='liftMode' text='Lifter is in %s mode' />
+				<Label fx:id='liftSetpoint' text='Lifter setpoint is %f' />
+			</VBox>
+
+			<Separator orientation='VERTICAL' />
+
+			<VBox alignment='CENTER_LEFT'>
+				<Label fx:id='robotDisplacement' text='Robot position is X = %f inches, Y = %f inches' />
+
+				<Separator prefHeight='20' />
+
+				<Label fx:id='robotHeading' text='Gyro heading is %f\u00b0' />
+				<Label fx:id='robotTilt' text='Robot tilt is %f\u00b0' />
+				<Label fx:id='driveMode' text='Drive mode is %s' />
+			</VBox>
+		</HBox>
+	</right>
+
+	<bottom>
+		<VBox>
+			<Separator />
+
+			<Label text='Robot Trim' />
+			<Slider fx:id='trim' min='-1.0' max='1.0' value='0.0'
+				showTickLabels='true' showTickMarks='true'
+				majorTickUnit='0.25'/>
+		</VBox>
+	</bottom>
+</BorderPane>
